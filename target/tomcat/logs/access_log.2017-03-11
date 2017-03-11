@@ -66,3 +66,10 @@
 0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:43:10 +0530] "POST /todo.do HTTP/1.1" 200 557 http-bio-8080-exec-3 0
 0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:43:12 +0530] "POST /todo.do HTTP/1.1" 200 575 http-bio-8080-exec-3 1
 0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:43:18 +0530] "POST /todo.do HTTP/1.1" 200 620 http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:45:06 +0530] "POST /todo.do HTTP/1.1" 200 1194 http-bio-8080-exec-7 266
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:45:06 +0530] "GET /webjars/bootstrap/3.3.6/js/bootstrap.min.js HTTP/1.1" 200 36868 http-bio-8080-exec-2 89
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:45:06 +0530] "GET /webjars/bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1" 200 121260 http-bio-8080-exec-7 117
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:45:06 +0530] "GET /webjars/jquery/1.9.1/jquery.min.js HTTP/1.1" 200 92629 http-bio-8080-exec-1 114
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:45:07 +0530] "GET /webjars/bootstrap/3.3.6/css/bootstrap.min.css.map HTTP/1.1" 200 54416 http-bio-8080-exec-1 42
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:47:55 +0530] "POST /todo.do HTTP/1.1" 200 2443 http-bio-8080-exec-6 207
+0:0:0:0:0:0:0:1 - - [11/Mar/2017:23:48:00 +0530] "GET /todo.do HTTP/1.1" 200 2443 http-bio-8080-exec-6 0
