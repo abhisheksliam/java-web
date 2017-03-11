@@ -8,5 +8,10 @@
 Your Todos are
 ${todos}
 </div>
+<div>
+<%
+out.println("Your IP address is " + request.getRemoteAddr());
+%>
+</div>
 </body>
 </html>
