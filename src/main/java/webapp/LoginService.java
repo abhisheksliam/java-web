@@ -1,8 +1,12 @@
 package webapp;
 
 public class LoginService {
-    public boolean validateUser(String user, String password) {
-        return user.equalsIgnoreCase("test") && password.equals("test");
+
+    public boolean isUserValid(String user, String password) {
+        if (user.equals("test") && password.equals("test"))
+            return true;
+
+        return false;
     }
 
 }

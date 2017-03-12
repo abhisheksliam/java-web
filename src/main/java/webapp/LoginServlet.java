@@ -8,34 +8,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import webapp.todo.TodoService;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
 
-    private LoginService service = new LoginService();
+    private LoginService userValidationService = new LoginService();
     private TodoService todoService = new TodoService();
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
-        request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(
+                request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
 
-        boolean isValidUser = service.validateUser(name, password);
+        boolean isUserValid = userValidationService.isUserValid(name, password);
 
-        if (isValidUser) {
-        	response.sendRedirect("/todo.do");
+        if (isUserValid) {
+            request.getSession().setAttribute("name", name);
+            response.sendRedirect("/todo.do");
         } else {
-            request.setAttribute("errorMessage", "Invalid Credentials!!");
-            request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+            request.setAttribute("errorMessage", "Invalid Credentials!");
+            request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(
+                    request, response);
         }
     }
 
